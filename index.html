@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vincent Camuta | Virtual Assistant &amp; Executive Assistant</title>
+<meta name="description" content="Vincent Camuta: remote Virtual Assistant and Executive Assistant with 9+ years in customer relations, admin support and finance.">
+<meta name="theme-color" content="#070a12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✨%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem("vc-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<style>
+:root{--ease:cubic-bezier(.2,.7,.2,1)}
+:root[data-theme=dark]{--bg:#070a12;--text:#e9eefb;--muted:#a3adc6;--glass:rgba(16,22,38,.62);--line:rgba(160,190,255,.18);--a1:#2ee6c5;--a2:#8b7bff;--a3:#ff6fb5;--a4:#ffd166;--blob:.55;--txt-a:#38f0cf;--txt-b:#a995ff;--txt-c:#ff86c4;--txt-d:#ffd98a;color-scheme:dark}
+:root[data-theme=light]{--bg:#f4f3fb;--text:#171a2e;--muted:#4f5671;--glass:rgba(255,255,255,.72);--line:rgba(60,70,130,.18);--a1:#5ee0cb;--a2:#a99bff;--a3:#ff9ccb;--a4:#ffd98a;--blob:.6;--txt-a:#007c6b;--txt-b:#5b3fd6;--txt-c:#c2185b;--txt-d:#a35f00;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-snap-type:y proximity;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.05rem/1.65 Figtree,system-ui,sans-serif;transition:background .5s,color .5s;overflow-x:hidden}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:700;line-height:1.1;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.8rem,7vw,5.6rem)}h2{font-size:clamp(1.9rem,3.6vw,3rem)}
+p{margin:0 0 1em;max-width:62ch}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--a1);outline-offset:3px;border-radius:6px}
+
+/* aurora background */
+.aurora{position:fixed;inset:0;z-index:-1;overflow:hidden;animation:hue 40s linear infinite}
+.aurora i{position:absolute;width:60vmax;height:60vmax;border-radius:50%;filter:blur(90px);opacity:var(--blob);mix-blend-mode:screen}
+:root[data-theme=light] .aurora i{mix-blend-mode:multiply}
+.aurora i:nth-child(1){background:var(--a1);left:-15vmax;top:-20vmax;animation:d1 26s ease-in-out infinite alternate}
+.aurora i:nth-child(2){background:var(--a2);right:-20vmax;top:5vmax;animation:d2 32s ease-in-out infinite alternate}
+.aurora i:nth-child(3){background:var(--a3);left:15vmax;bottom:-30vmax;animation:d3 36s ease-in-out infinite alternate}
+.aurora i:nth-child(4){background:var(--a4);right:5vmax;bottom:-35vmax;width:45vmax;height:45vmax;opacity:calc(var(--blob) * .6);animation:d1 30s ease-in-out infinite alternate-reverse}
+@keyframes hue{to{filter:hue-rotate(360deg)}}
+@keyframes d1{to{transform:translate(18vmax,14vmax) scale(1.2)}}
+@keyframes d2{to{transform:translate(-22vmax,18vmax) scale(.85)}}
+@keyframes d3{to{transform:translate(20vmax,-16vmax) scale(1.15)}}
+.aurora-text{background:linear-gradient(90deg,var(--txt-a),var(--txt-b),var(--txt-c),var(--txt-d),var(--txt-a));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shift 12s linear infinite}
+@keyframes shift{to{background-position:300% 0}}
+
+/* chrome */
+.brand{position:fixed;top:18px;left:22px;z-index:20;font:700 1.15rem Fraunces,serif;text-decoration:none;padding:.35rem .8rem;border:1px solid var(--line);border-radius:999px;background:var(--glass);backdrop-filter:blur(10px)}
+#theme{position:fixed;top:14px;right:18px;z-index:20;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(10px);color:var(--text);cursor:pointer;font-size:1.2rem;display:grid;place-items:center;transition:transform .4s var(--ease)}
+#theme:hover{transform:rotate(25deg) scale(1.08)}
+.timeline{position:fixed;right:22px;top:50%;translate:0 -50%;z-index:15;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.timeline::before{content:"";position:absolute;right:5px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline a{position:relative;display:flex;align-items:center;justify-content:flex-end;gap:10px;text-decoration:none;font-size:.78rem;color:var(--muted)}
+.timeline a span{opacity:0;transform:translateX(8px);transition:.3s;white-space:nowrap;background:var(--glass);border:1px solid var(--line);padding:.15rem .6rem;border-radius:999px;backdrop-filter:blur(10px)}
+.timeline a:hover span,.timeline a.on span,.timeline a:focus-visible span{opacity:1;transform:none}
+.timeline a::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--muted);z-index:1;transition:.3s}
+.timeline a.on::after{background:var(--a1);border-color:var(--a1);box-shadow:0 0 0 5px color-mix(in srgb,var(--a1) 28%,transparent);scale:1.2}
+
+/* pages */
+.page{min-height:100svh;scroll-snap-align:start;display:flex;align-items:center;padding:96px clamp(20px,7vw,110px) 72px;position:relative}
+.page>*{width:100%;max-width:1220px;margin-inline:auto}
+.split{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:start;padding-right:46px}
+.split>.copy{position:sticky;top:100px}
+.stack .split{grid-template-columns:minmax(0,1fr);max-width:980px}
+.stack .split>.copy{position:static}
+.narrow{grid-template-columns:minmax(0,.9fr) minmax(0,1fr)}
+.kicker{font-weight:600;color:var(--muted);margin-bottom:.6em;letter-spacing:.01em}
+.sub{font-size:1.2rem;font-weight:600;margin-bottom:1em}
+.copy strong{font-weight:600}
+.ticks{list-style:none;padding:0;margin:0 0 1em}
+.ticks li{position:relative;padding:.35rem 0 .35rem 1.8rem}
+.ticks li::before{content:"";position:absolute;left:0;top:.95em;width:.9rem;height:.9rem;border-radius:50%;background:conic-gradient(var(--a1),var(--a2),var(--a3),var(--a4),var(--a1))}
+.facts{margin:0}.facts dt{font:700 1.05rem Fraunces,serif;margin-top:.9rem;color:var(--txt-b)}.facts dd{margin:.1rem 0 0;max-width:60ch}
+:root[data-theme=dark] .facts dt{color:var(--txt-a)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,5vw,64px);align-items:center;padding-right:46px}
+.role{font:500 clamp(1.2rem,2.2vw,1.7rem) Fraunces,serif;margin-bottom:1rem}
+.lede{color:var(--muted)}
+.contact{list-style:none;padding:0;margin:1.2rem 0 1.6rem;display:grid;gap:.45rem}
+.contact li{display:grid;grid-template-columns:6.5rem 1fr;gap:.5rem}.contact span{color:var(--muted)}
+.contact a{text-underline-offset:3px}
+.btn{display:inline-block;border:0;cursor:pointer;font:600 1rem Figtree,sans-serif;padding:.85rem 1.6rem;border-radius:999px;color:#06101a;text-decoration:none;background:linear-gradient(90deg,var(--a1),var(--a2),var(--a3),var(--a1));background-size:250% 100%;animation:shift 8s linear infinite;transition:transform .3s var(--ease),box-shadow .3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px -10px var(--a2)}
+.btn[disabled]{opacity:.6;cursor:wait}
+.hero-3d{perspective:1100px;display:grid;place-items:center}
+.stage{position:relative;width:min(380px,78vw);aspect-ratio:3/4;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease-out;animation:enter 1.4s var(--ease) both}
+@keyframes enter{from{opacity:0;transform:rotateY(-70deg) rotateX(12deg) scale(.8)}}
+.portrait{margin:0;position:absolute;inset:0;border-radius:28px;overflow:hidden;transform:translateZ(50px);box-shadow:0 40px 80px -30px rgba(0,0,0,.6);border:1px solid var(--line)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.ring{position:absolute;inset:-9%;border-radius:36px;border:2px solid transparent;background:conic-gradient(from 0deg,var(--a1),var(--a2),var(--a3),var(--a4),var(--a1)) border-box;-webkit-mask:linear-gradient(#000 0 0) padding-box exclude,linear-gradient(#000 0 0);mask:linear-gradient(#000 0 0) padding-box exclude,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.85}
+.r1{transform:translateZ(-20px) rotate(-4deg)}.r2{inset:-18%;transform:translateZ(-70px) rotate(5deg);opacity:.45}
+.chip{position:absolute;padding:.4rem .9rem;border-radius:999px;font-size:.88rem;font-weight:600;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(12px);transform:translateZ(110px);animation:float 6s ease-in-out infinite alternate;white-space:nowrap}
+.c1{left:-14%;top:12%}.c2{right:-12%;top:46%;animation-delay:-2s}.c3{left:-6%;bottom:8%;animation-delay:-4s}
+@keyframes float{to{translate:0 -12px}}
+
+/* galleries */
+.gallery{columns:2;column-gap:16px;perspective:1000px;margin:1.2rem 0 1.4rem}
+.gallery.one{columns:1;margin:0}
+.split>.gallery{margin:0}
+.tile{margin:0 0 16px;break-inside:avoid;border-radius:18px;overflow:hidden;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(8px);transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease-out,box-shadow .3s,opacity .8s var(--ease),scale .8s var(--ease);box-shadow:0 18px 40px -26px rgba(0,0,0,.55)}
+.tile:hover{box-shadow:0 28px 50px -24px var(--a2)}
+.tile .zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.tile img{display:block;width:100%;height:auto}
+.contain .tile .zoom{padding:8px;background:#fff}
+.tile figcaption{padding:.55rem .9rem;font-size:.88rem;color:var(--muted)}
+.js .tile{opacity:0;scale:.94}.js .page.in .tile{opacity:1;scale:1;transition-delay:calc(var(--i,0) * 70ms)}
+.gallery.wide{columns:1}
+
+/* form */
+.card{background:var(--glass);border:1px solid var(--line);border-radius:22px;padding:clamp(18px,3vw,32px);backdrop-filter:blur(14px);display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:.35rem;font-weight:600;font-size:.95rem}
+input,textarea{font:400 1rem Figtree,sans-serif;color:var(--text);background:color-mix(in srgb,var(--bg) 55%,transparent);border:1px solid var(--line);border-radius:12px;padding:.75rem .9rem;width:100%;transition:border-color .2s,box-shadow .2s}
+input:focus,textarea:focus{outline:none;border-color:var(--a1);box-shadow:0 0 0 4px color-mix(in srgb,var(--a1) 25%,transparent)}
+input:user-invalid{border-color:#ff6b81}
+.hp{position:absolute;left:-9999px;opacity:0}
+#status{margin:0;min-height:1.6em;font-weight:500}
+footer{position:absolute;bottom:18px;left:0;right:0;text-align:center;font-size:.9rem;color:var(--muted);max-width:none}
+
+/* lightbox */
+dialog{border:0;background:transparent;padding:0;max-width:96vw;max-height:94vh;color:#fff}
+dialog::backdrop{background:rgba(3,5,12,.88);backdrop-filter:blur(6px)}
+dialog img{max-width:96vw;max-height:84vh;border-radius:12px;display:block;margin:auto;background:#fff0}
+dialog p{text-align:center;margin:.6rem auto 0}
+dialog button{position:fixed;top:16px;right:18px;font-size:1.6rem;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.4);color:#fff;cursor:pointer}
+
+@media (max-width:900px){
+ .split,.hero,.narrow{grid-template-columns:1fr;padding-right:0}
+ .split>.copy{position:static}
+ .page{padding:88px 20px 64px;align-items:flex-start}
+ .timeline{right:8px;gap:12px}.timeline a span{display:none}
+ .hero-3d{order:-1}.stage{width:min(260px,64vw)}
+ .c1{left:-6%}.c2{right:-6%}.row{grid-template-columns:1fr}
+ .gallery{columns:2}
+}
+@media (max-width:480px){.gallery.two{columns:1}.contact li{grid-template-columns:1fr;gap:0}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.js .tile{opacity:1;scale:1}}
+</style>
+</head>
+<body>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<a class="brand" href="#about" aria-label="Back to top">VC</a>
+<button id="theme" type="button" aria-label="Switch to light mode" title="Switch theme">☾</button>
+<ol class="timeline" id="timeline" aria-label="Page timeline"></ol>
+<main>
+<section class="page " id="about" data-label="About" data-year="Now">
+<div class="hero">
+ <div class="hero-copy">
+  <p class="kicker">Application for a remote role</p>
+  <h1 class="aurora-text">Vincent Camuta</h1>
+  <p class="role">Virtual Assistant &amp; Executive Assistant</p>
+  <p class="lede">I bring more than nine years of customer relations, admin support and finance experience to remote work. I stay organized, handle many tasks on my own, learn fast and adapt quickly. Scroll down to follow my story from university to today.</p>
+  <ul class="contact">
+   <li><span>Phone</span><a href="tel:+639671875589">+63 967 187 5589</a></li>
+   <li><span>Email</span><a href="mailto:vac5953@gmail.com">vac5953@gmail.com</a></li>
+   <li><span>Website</span><a href="https://vlxyschvitz.github.io/Vincent-Camuta-Intro" target="_blank" rel="noopener">www.vincentcamuta.com</a></li>
+   <li><span>Based in</span>Cagayan de Oro City, Philippines</li>
+   <li><span>Languages</span>English, Filipino, Cebuano (Bisaya)</li>
+  </ul>
+  <a class="btn" href="#contact">Send me a message</a>
+ </div>
+ <div class="hero-3d"><div class="stage tilt-hero">
+  <div class="ring r1"></div><div class="ring r2"></div>
+  <figure class="portrait"><img src="profile.jpg" alt="Portrait of Vincent Camuta"></figure>
+  <span class="chip c1">9+ years experience</span><span class="chip c2">Remote since 2020</span><span class="chip c3">Fast learner</span>
+ </div></div>
+</div></section>
+<section class="page " id="education" data-label="Education" data-year="University">
+<div class="split"><div class="copy">
+ <p class="kicker">Education</p>
+ <h2 class="aurora-text">Xavier University – Ateneo de Cagayan</h2>
+ <p class="sub">Bachelor of Business Administration</p>
+ <p>I studied as a <strong>XUCPFA scholar</strong>. Alongside my classes I worked as a student assistant in the <strong>School of Business and Management</strong> and the <strong>Central Processing Unit</strong>, where I learned to balance deadlines, paperwork and people.</p>
+ <p>I also joined <strong>XU Círculo de Arte</strong>, which gave me a creative outlet and a strong sense of teamwork.</p>
+</div><div class="gallery "><figure class="tile tilt "><button type="button" class="zoom" data-src="xu-xavier-days.jpg" data-cap="Vince at Xavier Days, Xavier University"><img src="xu-xavier-days.jpg" alt="Vincent at Xavier Days, Xavier University" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="xu-circulo-de-arte.JPG" data-cap="XU Círculo de Arte members"><img src="xu-circulo-de-arte.JPG" alt="XU Círculo de Arte members" loading="lazy" decoding="async"></button><figcaption>XU Círculo de Arte</figcaption></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="xu-2.png" data-cap="Class group photo at Xavier University"><img src="xu-2.png" alt="Class group photo at Xavier University" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="xu-3.png" data-cap="Classmates at Xavier University"><img src="xu-3.png" alt="Classmates at Xavier University" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="xu-1.jpg" data-cap="Friends at Xavier University"><img src="xu-1.jpg" alt="Friends at Xavier University" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="xu-4.jpg" data-cap="Student friends at Xavier University"><img src="xu-4.jpg" alt="Student friends at Xavier University" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="xu-sbm.jpg" data-cap="Vincent in uniform, School of Business and Management"><img src="xu-sbm.jpg" alt="Vincent in uniform, School of Business and Management" loading="lazy" decoding="async"></button><figcaption>School of Business and Management</figcaption></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="xu-5.png" data-cap="SBM Finance defense"><img src="xu-5.png" alt="SBM Finance defense" loading="lazy" decoding="async"></button><figcaption>SBM Finance Defense</figcaption></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="xu-cpu.jpg" data-cap="Workstation at the Central Processing Unit"><img src="xu-cpu.jpg" alt="Workstation at the Central Processing Unit" loading="lazy" decoding="async"></button><figcaption>Central Processing Unit</figcaption></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="xu-sa.jpg" data-cap="Student assistant desk at Xavier University"><img src="xu-sa.jpg" alt="Student assistant desk at Xavier University" loading="lazy" decoding="async"></button><figcaption>Student assistant desk</figcaption></figure></div></div></section>
+<section class="page stack" id="mortgage" data-label="PRM &amp; Allstate" data-year="2016–2017">
+<div class="split"><div class="copy">
+ <p class="kicker">PRM DataQuest · Allstate</p>
+ <h2 class="aurora-text">Mortgage refinancing and insurance</h2>
+ <p><strong>PRM DataQuest.</strong> I learned how mortgage refinancing works, including <strong>FHA, VA and USDA loans</strong> and the difference between <strong>fixed and variable rates</strong>.</p>
+ <div class="gallery two"><figure class="tile tilt "><button type="button" class="zoom" data-src="prm-data-quest.jpg" data-cap="PRM DataQuest team"><img src="prm-data-quest.jpg" alt="PRM DataQuest team" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="prm-dataquest-2.jpg" data-cap="Vincent at PRM DataQuest"><img src="prm-dataquest-2.jpg" alt="Vincent at PRM DataQuest" loading="lazy" decoding="async"></button></figure></div>
+ <p><strong>Allstate.</strong> I learned the range of insurance products offered: automobile, life, health and more.</p>
+ <div class="gallery two"><figure class="tile tilt "><button type="button" class="zoom" data-src="allstate.jpg" data-cap="Allstate team"><img src="allstate.jpg" alt="Allstate team" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="allstate-1.jpg" data-cap="Allstate team celebration"><img src="allstate-1.jpg" alt="Allstate team celebration" loading="lazy" decoding="async"></button></figure></div>
+</div></div></section>
+<section class="page " id="azpired" data-label="Azpired" data-year="2017–2018">
+<div class="split"><div class="copy">
+ <p class="kicker">Azpired · Liberty Yellow Cab New York</p>
+ <h2 class="aurora-text">Where my New York accent comes from</h2>
+ <p>On the Liberty Yellow Cab New York account, agents were trained to sound like real New Yorkers. That is where my natural New York accent comes from, and it helps me sound clear, friendly and confident with US clients.</p>
+</div><div class="gallery "><figure class="tile tilt "><button type="button" class="zoom" data-src="azpired.jpg" data-cap="Azpired team"><img src="azpired.jpg" alt="Azpired team" loading="lazy" decoding="async"></button><figcaption>Liberty Yellow Cab New York</figcaption></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="azpired-2.jpg" data-cap="Vincent at Azpired"><img src="azpired-2.jpg" alt="Vincent at Azpired" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="azpired-party.png" data-cap="Azpired party"><img src="azpired-party.png" alt="Azpired party" loading="lazy" decoding="async"></button></figure></div></div></section>
+<section class="page " id="tp" data-label="Teleperformance" data-year="2018–2020">
+<div class="split"><div class="copy">
+ <p class="kicker">Teleperformance · T-Mobile USA</p>
+ <h2 class="aurora-text">Expert training for a telco account</h2>
+ <p>The T-Mobile USA account began with <strong>three months</strong> of expansive training so we could become <strong>TEX (Team of Experts)</strong>.</p>
+ <ul class="ticks"><li>Basic device troubleshooting</li><li>Product upselling, upgrades and promotions, including Samsung and Apple launches</li><li>General customer care and complaint handling, aiming to avoid or reduce department transfers</li></ul>
+</div><div class="gallery "><figure class="tile tilt "><button type="button" class="zoom" data-src="tp.jpg" data-cap="Teleperformance batch"><img src="tp.jpg" alt="Teleperformance batch" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="tp-2.png" data-cap="Teleperformance team"><img src="tp-2.png" alt="Teleperformance team" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="tp-1.jpg" data-cap="Vincent at the Teleperformance photo wall"><img src="tp-1.jpg" alt="Vincent at the Teleperformance photo wall" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="tp-3.jpg" data-cap="Teleperformance teammate"><img src="tp-3.jpg" alt="Teleperformance teammate" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="tp-6.jpg" data-cap="Teleperformance teammates"><img src="tp-6.jpg" alt="Teleperformance teammates" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="tp-5.jpg" data-cap="Teleperformance teammates"><img src="tp-5.jpg" alt="Teleperformance teammates" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="tp-4.jpg" data-cap="Teleperformance kick-off party"><img src="tp-4.jpg" alt="Teleperformance kick-off party" loading="lazy" decoding="async"></button></figure></div></div></section>
+<section class="page " id="concentrix" data-label="Concentrix" data-year="2020–2026">
+<div class="split"><div class="copy">
+ <p class="kicker">Concentrix · Remote, full time</p>
+ <h2 class="aurora-text">Strategy Representative, six years</h2>
+ <p>A work-from-home role that combines non-voice admin work with voice-based problem solving. Every day I completed <strong>8 to 12 different tasks</strong>.</p>
+ <ul class="ticks"><li>CRM management, including B2B and B2C complaints</li><li>Client escalations and customer relations</li><li>Data management and reporting</li><li>Support for retail brands such as Walmart, Costco and Wayfair</li></ul>
+</div><div class="gallery two contain"><figure class="tile tilt "><button type="button" class="zoom" data-src="concentrix.jpg" data-cap="Concentrix employee profile"><img src="concentrix.jpg" alt="Concentrix employee profile" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="concentrix-1.jpg" data-cap="Concentrix certificate of achievement"><img src="concentrix-1.jpg" alt="Concentrix certificate of achievement" loading="lazy" decoding="async"></button></figure></div></div></section>
+<section class="page stack" id="other" data-label="Other experience" data-year="Alongside">
+<div class="split"><div class="copy">
+ <p class="kicker">Other experience</p>
+ <h2 class="aurora-text">Maps, AI data and housing finance</h2>
+ <p><strong>Maps Quality Analyst, Lionbridge (2020–2021).</strong> I worked part time as a Google and Bing Maps quality evaluator and analyst, rating search results for relevance and accuracy on a flexible 20-hour weekly schedule.</p>
+ <div class="gallery two contain"><figure class="tile tilt "><button type="button" class="zoom" data-src="lionbridge-1.jpg" data-cap="Map quality evaluation task"><img src="lionbridge-1.jpg" alt="Map quality evaluation task" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="lionbridge.jpg" data-cap="Transit query guidelines"><img src="lionbridge.jpg" alt="Transit query guidelines" loading="lazy" decoding="async"></button></figure></div>
+ <p><strong>AI Data Reviewer, Trainer and Annotator, Aligner (2023–2026).</strong> I trained and evaluated AI models, gave quality feedback and labeled data across several projects at once.</p>
+ <p><strong>PAG-IBIG Fund (HDMF) internship.</strong> During a summer internship I learned about housing loans and worked directly with department heads.</p>
+ <div class="gallery two"><figure class="tile tilt "><button type="button" class="zoom" data-src="pagibig-pag-ibig.jpg" data-cap="PAG-IBIG desk"><img src="pagibig-pag-ibig.jpg" alt="PAG-IBIG station" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="pagibig-pag-ibig-1.jpg" data-cap="Vince during the PAG-IBIG internship"><img src="pagibig-pag-ibig-1.jpg" alt="Vincent during the PAG-IBIG internship" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="pagibig-pag-ibig-2.jpg" data-cap="Vince PAG-IBIG desk"><img src="pagibig-pag-ibig-2.jpg" alt="Vince PAG-IBIG desk" loading="lazy" decoding="async"></button></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="pagibig-pag-ibig-fund.jpg" data-cap="PAG-IBIG Fund office"><img src="pagibig-pag-ibig-fund.jpg" alt="PAG-IBIG Fund office" loading="lazy" decoding="async"></button></figure></div>
+</div></div></section>
+<section class="page " id="certs" data-label="Certificates" data-year="Learning">
+<div class="split"><div class="copy">
+ <p class="kicker">Certificates</p>
+ <h2 class="aurora-text">Google and Harvard certifications</h2>
+ <p>These help me work better in this role. Tap a certificate to enlarge it.</p>
+ <ul class="ticks"><li>Google Advanced Data Analytics</li><li>Google Data Analytics</li><li>Google Business Intelligence</li><li>Google Project Management</li><li>Google Digital Marketing &amp; E-Commerce</li><li>Google IT Automation with Python</li><li>Google Cybersecurity</li><li>Harvard CS50x Introduction to Computer Science</li></ul>
+</div><div class="gallery two contain certs"><figure class="tile tilt "><button type="button" class="zoom" data-src="cert-harvard-cs50-certificate.jpg" data-cap="Harvard CS50x Introduction to Computer Science certificate"><img src="cert-harvard-cs50-certificate.jpg" alt="Harvard CS50x Introduction to Computer Science certificate" loading="lazy" decoding="async"></button><figcaption>Harvard CS50x</figcaption></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="cert-google-business-intel-certificate.jpg" data-cap="Google Business Intelligence certificate"><img src="cert-google-business-intel-certificate.jpg" alt="Google Business Intelligence certificate" loading="lazy" decoding="async"></button><figcaption>Google Business Intelligence</figcaption></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="cert-google-project-management.jpg" data-cap="Google Project Management certificate"><img src="cert-google-project-management.jpg" alt="Google Project Management certificate" loading="lazy" decoding="async"></button><figcaption>Google Project Management</figcaption></figure><figure class="tile tilt "><button type="button" class="zoom" data-src="cert-google-it-auto-with-python-certificate.jpg" data-cap="Google IT Automation with Python certificate"><img src="cert-google-it-auto-with-python-certificate.jpg" alt="Google IT Automation with Python certificate" loading="lazy" decoding="async"></button><figcaption>Google IT Automation with Python</figcaption></figure></div></div></section>
+<section class="page " id="interests" data-label="Interests" data-year="Off the clock">
+<div class="split"><div class="copy">
+ <p class="kicker">Hobbies and interests</p>
+ <h2 class="aurora-text">What inspires me</h2>
+ <dl class="facts">
+  <dt>Idols</dt><dd>Magnus Carlsen, Steve Jobs, Tilda Swinton, Cate Blanchett and Tony Robbins. Also Beth Harmon, fictional but admired for her fashion sense and aura.</dd>
+  <dt>Chess</dt><dd>I play on chess.com in my free time. I am not sure I am any good, but I enjoy it.</dd>
+  <dt>Artistry</dt><dd>Beyoncé, Lady Gaga and Rihanna.</dd>
+  <dt>Fashion</dt><dd>Emma Stone and Anne Hathaway.</dd>
+  <dt>Sports</dt><dd>WTA tennis whenever Alex Eala plays, Manny Pacquiao fights from the old days, and Efren “Bata” Reyes billiard trick shots.</dd>
+  <dt>Music</dt><dd>It depends on my mood, so my library is very wide.</dd>
+  <dt>Reading</dt><dd>Manga, fantasy fiction, self-help, and sometimes even the tax code and law books.</dd>
+ </dl>
+</div><div class="gallery one"><figure class="tile tilt wide"><button type="button" class="zoom" data-src="interests.jpg" data-cap="Vision collage of Vincent's idols and interests"><img src="interests.jpg" alt="Vision collage of Vincent's idols and interests" loading="lazy" decoding="async"></button></figure></div></div></section>
+<section class="page " id="contact" data-label="Contact" data-year="Let's talk">
+<div class="split narrow"><div class="copy">
+ <p class="kicker">Contact</p>
+ <h2 class="aurora-text">Let's work together</h2>
+ <p>Send me a message and I will reply by email. References are available on request.</p>
+</div>
+<form id="form" class="card" novalidate>
+ <div class="row"><label>First name<input name="first_name" autocomplete="given-name" required></label><label>Last name<input name="last_name" autocomplete="family-name" required></label></div>
+ <label>Country<input name="country" autocomplete="country-name" required></label>
+ <label>Phone number with country code<input name="phone" type="tel" placeholder="+63 900 000 0000" autocomplete="tel" required></label>
+ <label>Email<input name="email" type="email" autocomplete="email" required></label>
+ <label>Message<textarea name="message" rows="4" required></textarea></label>
+ <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+ <button class="btn" type="submit" id="send">Send message</button>
+ <p id="status" role="status" aria-live="polite"></p>
+</form></div>
+<footer>© 2026 Vincent Camuta. All rights reserved.</footer></section>
+
+</main>
+<dialog id="lb" aria-label="Enlarged image"><button type="button" id="lbx" aria-label="Close">×</button><img alt=""><p></p></dialog>
+<script>
+document.documentElement.classList.add("js");
+const root=document.documentElement,tb=document.getElementById("theme");
+function paint(){const d=root.dataset.theme==="dark";tb.textContent=d?"☾":"☀";tb.setAttribute("aria-label",d?"Switch to light mode":"Switch to dark mode");document.querySelector('meta[name=theme-color]').content=d?"#070a12":"#f4f3fb"}
+tb.onclick=()=>{root.dataset.theme=root.dataset.theme==="dark"?"light":"dark";try{localStorage.setItem("vc-theme",root.dataset.theme)}catch(e){}paint()};paint();
+
+const pages=[...document.querySelectorAll(".page")],tl=document.getElementById("timeline");
+pages.forEach(p=>{const li=document.createElement("li"),a=document.createElement("a");a.href="#"+p.id;a.innerHTML=`<span>${p.dataset.label} · ${p.dataset.year}</span>`;a.setAttribute("aria-label",p.dataset.label.replace(/&amp;/g,"&"));li.append(a);tl.append(li);p._a=a;p.querySelectorAll(".tile").forEach((t,i)=>t.style.setProperty("--i",i))});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");pages.forEach(p=>p._a.classList.toggle("on",p===e.target))}}),{threshold:.35});
+pages.forEach(p=>io.observe(p));
+const first=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("in")}),{threshold:.05});pages.forEach(p=>first.observe(p));
+
+if(matchMedia("(hover:hover) and (pointer:fine)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+ document.addEventListener("pointermove",e=>{
+  const t=e.target.closest(".tile,.tilt-hero");
+  if(!t)return;const r=t.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5,m=t.classList.contains("tilt-hero")?16:9;
+  t.style.setProperty("--ry",(x*m).toFixed(2)+"deg");t.style.setProperty("--rx",(-y*m).toFixed(2)+"deg")});
+ document.addEventListener("pointerout",e=>{const t=e.target.closest(".tile,.tilt-hero");if(t&&!t.contains(e.relatedTarget)){t.style.setProperty("--rx","0deg");t.style.setProperty("--ry","0deg")}});
+}
+
+const lb=document.getElementById("lb"),lbi=lb.querySelector("img"),lbp=lb.querySelector("p");
+document.addEventListener("click",e=>{const z=e.target.closest(".zoom");if(z){lbi.src=z.dataset.src;lbi.alt=z.dataset.cap;lbp.textContent=z.dataset.cap;lb.showModal()}else if(e.target===lb||e.target.id==="lbx")lb.close()});
+
+const f=document.getElementById("form"),st=document.getElementById("status"),sb=document.getElementById("send");
+f.addEventListener("submit",async e=>{
+ e.preventDefault();
+ if(!f.checkValidity()){f.reportValidity();return}
+ const d=Object.fromEntries(new FormData(f));if(d._honey)return;
+ d._subject="Portfolio message from "+d.first_name+" "+d.last_name;d._template="table";d._captcha="false";
+ sb.disabled=true;sb.textContent="Sending…";st.textContent="";
+ try{
+  const r=await fetch("https://formsubmit.co/ajax/vincecamuta@gmail.com",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(d)});
+  const j=await r.json();
+  if(!r.ok||j.success==="false")throw 0;
+  st.textContent="Message sent. Thank you, I will reply by email soon.";f.reset();
+ }catch(_){
+  st.innerHTML='The message did not send. Please email <a href="mailto:vincecamuta@gmail.com">vincecamuta@gmail.com</a> directly.';
+ }
+ sb.disabled=false;sb.textContent="Send message";
+});
+</script>
+</body>
+</html>
